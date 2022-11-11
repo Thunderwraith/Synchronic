@@ -1,0 +1,120 @@
+$c-black: #000
+$c-white: #fff
+$c-green: green
+$c-red: red
+
+.container
+  width: 100% !important
+  max-width: 1200px !important
+  margin: 0 auto !important
+  padding: 0 !important
+  overflow-x: hidden !important
+
+.btn-wrapper
+  list-style-type: none
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  &__
+    &item
+      padding: 15px
+
+.el-btn
+  border: 0
+  outline: none
+  cursor: pointer
+  width: 100px
+  height: 45px
+  border-radius: 8px
+  &--
+    &default
+      border: 1px solid $c-black
+      background: $c-white
+      transition: .4s
+      &:hover
+        background: $c-black
+        color: $c-white
+        transition: .4s
+    &green
+      background: $c-green
+      color: $c-white
+      transition: .4s
+      &:hover
+        background: $c-white
+        border: 1px solid $c-green
+        color: $c-green
+        transition: .4s
+    &red
+      background: $c-red
+      color: $c-white
+      transition: .4s
+      &:hover
+        background: $c-white
+        border: 1px solid $c-red
+        color: $c-red
+        transition: .4s
+    &disabled
+      border: 0
+      pointer-events: none
+      background: #ccc
+
+.cards-section
+  margin: 50px 0
+  --bs-gutter-x: 2.7rem
+  --bs-gutter-y: 2.7rem
+  
+.card
+  position: relative
+  width: 100%
+  height: 100%
+  max-width: 370px
+  border: 1px solid #ccc
+  border-radius: 8px
+  margin: 0 auto
+  padding: 30px
+  text-align: center
+  &__
+    &remove
+      border: 1px solid $c-black
+      padding: 0 5px
+      position: absolute
+      top: 5px
+      right: 5px
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
+      &:hover
+        border: 1px solid $c-red
+        color: $c-red
+
+.clone-item, .log-clone
+  display: none !important
+
+.log
+  z-index: 10
+  background: #ccc
+  min-height: 100vh
+  position: fixed
+  width: 400px
+  top: 0
+  right: -100%
+  transition: 1.5s
+  &.isActive
+    transition: .9s
+    right: 0
+  &__
+    &wrapper
+      width: 100%
+      min-height: 100vh
+      padding: 15px
+    &content
+      overflow-y: scroll
+      height: 700px
+    &item
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 10px
+      margin: 15px 0
+      background: $c-white

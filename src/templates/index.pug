@@ -1,0 +1,54 @@
+extends base/injection
+block content
+  //- ------------------  CARD MODAL  -----------------
+  .modal.micromodal-slide#modal-1(
+    aria-hidden="true"
+  )
+    .modal__overlay(
+      tabindex="-1"
+      data-micromodal-close
+    )
+      .modal__container(
+        role="dialog" 
+        aria-modal="true"
+        aria-labelledby="modal-1-title"
+      )
+        .modal__header
+          h2.modal__title#modal-1-title Lorem, ipsum dolor
+          button.modal__close(
+            aria-label="Close modal"
+            data-micromodal-close
+          )
+        .modal__content#modal-1-content
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet provident, recusandae ipsam suscipit commodi quis enim? A cupiditate explicabo nam, fugiat enim eligendi. Fugit sit nihil similique rerum dignissimos nisi!
+  //- -------------------------------------------------
+  .log#log
+    .log__wrapper
+      .log__item
+        span 10 last removed cards
+        button.el-btn.el-btn--default.js-log LOG
+      .log__content#log-content-section
+        .log__item.log-clone
+          span.removed-title Lorem, ipsum.
+          button.el-btn.el-btn--green.log-restore Restore
+  .container
+    ul.btn-wrapper
+      li.btn-wrapper__item
+        button.el-btn.el-btn--green#js-add Add
+      li.btn-wrapper__item
+        button.el-btn.el-btn--red#js-remove Remove
+      li.btn-wrapper__item
+        button.el-btn.el-btn--default#js-fill Fill
+      li.btn-wrapper__item
+        button.el-btn.el-btn--default#js-clear Clear
+      li.btn-wrapper__item
+        button.el-btn.el-btn--default.js-log LOG
+    .row.justify-content-center.cards-section#js-card-section
+      .col-12.col-md-6.col-xl-4.clone-item
+        .card
+          .card__remove &#10005;
+          h4.card__title Lorem.
+          p.card__body Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam facilis corrupti at ipsum animi explicabo, architecto saepe in cupiditate.
+          button.card__modal.el-btn.el-btn--default(
+            style='margin: 0 auto'
+          ) Modal

@@ -1,0 +1,35 @@
+{
+  "name": "trash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.4.0",
+    "html-webpack-plugin": "^5.4.0",
+    "html-webpack-pug-plugin": "^3.0.0",
+    "micromodal": "^0.4.10",
+    "node-sass": "^6.0.1",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^12.2.0",
+    "style-loader": "^3.3.0",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1"
+  },
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
+    "mini-css-extract-plugin": "^2.4.2",
+    "webpack-dev-server": "^4.3.1"
+  }
+}
